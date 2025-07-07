@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Cosmetics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+
+
+
+
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: ##fffdfc;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  border-radius: 6px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-color: #ffffff;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #c71585;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-top: 10px;
+    
+    }
+
+    
+
+    section {
+     
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #c71585;
+      margin-bottom: 10px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .side-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  background: #fff1f4;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  height: 655px;
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  object-fit: cover;
+  height: auto;
+}
+
+.feature-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.feature-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #444;
+  max-width: 600px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #c71585;
+  color: #ffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #111;
+  color: #111;
+}
+
+.secondary-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+
+    .about p {
+      font-size: 1rem;
+      color: #444;
+      text-align: center;
+    }
+
+    .brand {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.cerave {
+  color: #1e90ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ordinary {
+  color: #222;
+  font-style: italic;
+}
+
+.neutrogena {
+  color: #00796b;
+  font-weight: 600;
+  border-bottom: 2px solid #00796b;
+}
+
+.laroche {
+  color: #1976d2;
+  font-size: 1.1rem;
+}
+
+.nivea {
+  color: #1a237e;
+  text-shadow: 1px 1px 2px #aaa;
+}
+
+.cosrx {
+  color: #c2185b;
+  font-variant: small-caps;
+}
+
+.brands-track {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+    .product-section {
+      background-color: #fbe9e6;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .product-section h2 {
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .product-item {
+      max-width: 200px;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background-color: #fbe9e6;
+      padding: 10px;
+    }
+
+    .product-item h3 {
+      font-size: 18px;
+      color: #333;
+      margin-top: 0;
+    }
+
+    .services {
+  padding: 60px 20px;
+  background-color: #fffaf8;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c2c2c;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fceae8;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+    .testimonials {
+  background: #fff1f4;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #c71585;
+}
+
+.testimonials-carousel {
+  background: #fff1f4;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #c71585;
+  margin-bottom: 30px;
+}
+
+
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.testimonial-slide {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+.testimonial-slide h4 {
+  margin-top: 15px;
+  color: #c71585;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+.skin-tone-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.skin-tone-gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c71585;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.skin-tone-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+.perfume-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff8fa;
+}
+
+.perfume-section h2 {
+  font-size: 2.5rem;
+  color: #c71585;
+  margin-bottom: 20px;
+}
+
+.perfume-section p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.perfume-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.perfume-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 15px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.perfume-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.perfume-card h3 {
+  margin-top: 10px;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.perfume-card:hover {
+  transform: translateY(-5px);
+}
+
+.makeup-section {
+  background-color: #fff0f5;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.makeup-section h2 {
+  font-size: 2.2rem;
+  color: #c71585;
+  margin-bottom: 10px;
+}
+
+.makeup-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.makeup-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.makeup-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.makeup-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.makeup-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+    .cta {
+      background-color: #fceae8;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      background-color: #c71585;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .shop-address {
+  background: #fff;
+  color: #333;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+}
+
+.shop-address h2 {
+  color: #c71585;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .side-layout {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .feature-text h2 {
+    font-size: 2rem;
+  }
+
+  .feature-text p {
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .carousel-track {
+    gap: 15px;
+  }
+
+  .perfume-gallery,
+  .makeup-gallery,
+  .skin-tone-gallery {
+    justify-content: center;
+  }
+
+  .perfume-section p,
+  .makeup-section p,
+  .consult-section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .testimonial-slide {
+    min-width: 260px;
+    max-width: 90%;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+
+    <div class="brand">
+      <img src="Images/ChatGPT_Image_Jul_5__2025__05_23_52_AM-removebg-preview.png" alt="Diamond Cosmetics Logo" class="logo">
+    
+      <div class="brand-text">
+        <h1>Diamond Cosmetics</h1>
+        <p>Your Trusted Source for Quality Skincare & Beauty Brands</p>
+      </div>
+    </div>
+    
+
+
+  </header>
+
+  
+
+  <section class="hero-feature side-layout">
+    <div class="feature-image">
+      <img src="images/IMG_4539-removebg-preview.png" alt="Diamond Cosmetics">
+    </div>
+    <div class="feature-text">
+      <h2>YOUR SKIN, OUR PRIORITY</h2>
+      <p>Glow up with premium skincare and expert consultation — all in one place.</p>
+      <div class="btn-group">
+        <a href="https://wa.link/5v46cw" class="btn">Shop Now</a>
+        <a href="https://wa.link/5v46cw" class="btn secondary-btn">Book Consultation</a>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="About">
+    <h2 class="section-title">About Us</h2>
+    <p>At Diamond Cosmetics, we believe skincare is personal. That’s why we don’t just offer products. We listen, we guide, and we genuinely care.
+      <strong>Our goal is simple:</strong> to help you feel confident, radiant, and completely at ease in your own skin — <strong>every single day.</strong></p>
+  </section>
+
+    
+  <div class="brands-section">
+    <div class="brands-track">
+      <span class="brand cerave">Cerave</span>
+      <span class="brand ordinary">The Ordinary</span>
+      <span class="brand neutrogena">Neutrogena</span>
+      <span class="brand laroche">La Roche-Posay</span>
+      <span class="brand nivea">Nivea</span>
+      <span class="brand cosrx">Cosrx</span>
+       <!-- Repeat once more for seamless loop -->
+      <span class="brand cerave">Cerave</span>
+      <span class="brand ordinary">The Ordinary</span>
+      <span class="brand neutrogena">Neutrogena</span>
+      <span class="brand laroche">La Roche-Posay</span>
+      <span class="brand nivea">Nivea</span>
+      <span class="brand cosrx">Cosrx</span>
+    </div>
+  </div>
+  
+
+
+  
+    <h2 class="section-title">Featured Products</h2>
+
+    <section class="product-section">
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="Images/cerave-aily-moisturising-lotion-12oz-removebg-preview (1).png" alt="Serum">
+          <h3>MOSTURIZING LOTION</h3>
+        </div>
+        <div class="product-item">
+          <img src="Images/Lotion-removebg-preview copy.png" alt="Moisturizer">
+          <h3>LIGHTENING BODY LOTION</h3>
+        </div>
+        <div class="product-item">
+          <img src="Images/Soap-removebg-preview.png" alt="Sunscreen">
+          <h3>TUMERIC SOAP</h3>
+        </div>
+
+        <div class="product-item">
+          <img src="Images/istockphoto-1296705483-612x612-removebg-preview (2).png" alt="Sunscreen">
+          <h3>MAKEUP PRODUCTS</h3>
+        </div>
+
+        <div class="product-item">
+          <img src="Images/Lotion2-removebg-preview.png" alt="Sunscreen">
+          <h3>TUMERIC BRIGHTENING CREAM</h3>
+        </div>
+
+        <div class="product-item">
+          <img src="Images/sprnw657-removebg-preview.png" alt="Sunscreen">
+          <h3>BODY SCRUB</h3>
+        </div>
+        
+        <div class="product-item">
+          <img src="Images/neutrogena-pink_1024x-removebg-preview.png" alt="Sunscreen">
+          <h3>FACE CLEANSER</h3>
+        </div>
+
+        <div class="product-item">
+          <img src="Images/Perfume-removebg-preview.png" alt="Sunscreen">
+          <h3>PERFUME</h3>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <span class="icon">🧴</span>
+          <h3>Resale of Premium Brands</h3>
+          <p>We offer authentic skincare and beauty products from 
+            trusted brands you know and love, all in one place.</p>
+        </div>
+        <div class="service-card">
+          <span class="icon">💬</span>
+          <h3>Personalized Consultations</h3>
+          <p>Book a session with our certified skincare experts to get advice tailored to your unique skin type and goals.</p>
+        </div>
+        <div class="service-card">
+          <span class="icon">📦</span>
+          <h3>Custom Product Pairing</h3>
+          <p>Let us help you build the perfect skincare routine with expert-picked product combos designed just for you.</p>
+        </div>
+      </div>
+    </section>
+    
+  
+  <section class="testimonials-carousel">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="carousel-track">
+      <div class="testimonial-slide">
+        <p>"Diamond Cosmetics completely transformed my skincare journey! My skin has never felt better."</p>
+        <h4>— Anita Cynthia.</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p>"I love how personal their service feels. It's like having a skincare bestie who truly gets you."</p>
+        <h4>— Grace Ken.</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Great products, fast delivery, and the consultation helped me avoid ineffective products."</p>
+        <h4>— Ujunwa.</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Their customer care is outstanding. I felt so heard and cared for during my skincare consultation."</p>
+        <h4>— Chioma Divine.</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p>"I’ve never been more confident in my skin! Thank you for being so genuine and helpful."</p>
+        <h4>— Zara.</h4>
+      </div>
+
+   
+
+      <div class="testimonial-slide">
+        <p>"Shopping here feels like self-care. Diamond Cosmetics just gets what my skin needs."</p>
+        <h4>— Linda Ezeh.</h4>
+      </div>
+   
+    <div class="testimonial-slide">
+      <p>"The perfume I got from Diamond Cosmetics is heavenly! It lasts all day and turns heads everywhere I go."</p>
+      <h4>— Lois.</h4>
+    </div>
+    
+    <div class="testimonial-slide">
+      <p>"Their makeup collection is amazing! The foundation blends perfectly with my skin, and the lipsticks? Just wow — I felt so confident all day."</p>
+      <h4>— Joy.</h4>
+    </div>
+    
+    </div>
+  </section>
+  
+  <section class="consult-section">
+    <h2>Your Skin is Unique — Treat It That Way</h2>
+    <p>
+      We all have different skin tones, textures, and needs. That’s why one-size-fits-all doesn't work in skincare. 
+      At Diamond Cosmetics, we offer personalized consultations to help you find what works best for <strong>your skin</strong>.  
+      Let us recommend the right products so your skin can glow, stay healthy, and leave people staring in awe.
+    </p>
+  
+    <div class="skin-tone-gallery">
+      <img src="images/Dark_skin_tone-removebg-preview.png" alt="Dark skin tone" />
+      <img src="images/IMG_4547.jpeg" alt="Medium skin tone" />
+      <img src="images/IMG_4546-removebg-preview.png" alt="Light skin tone" />
+      <img src="images/olive_skin-removebg-preview.png" alt="Olive skin tone" />
+    </div>
+  
+    <a href="https://wa.link/5v46cw" class="btn">Book a Free Consultation</a>
+  </section>
+  
+  <section class="perfume-section">
+    <h2>Smell Irresistible, Leave a Lasting Impression</h2>
+    <p>
+      Perfume isn’t just something you wear, it’s a feeling. A memory. A quiet kind of power. 
+      The right scent doesn’t just make you smell good; 
+      it makes you unforgettable. Let your fragrance walk in before you do…
+       and linger long after you’ve left."
+      <strong>Explore our handpicked collection of rich, long-lasting fragrances. 
+       Chosen to match your mood, your moments, and your magic.</strong>
+    </p>
+  
+    <div class="perfume-gallery">
+      <div class="perfume-card">
+        <img src="images/Royal_bloom_perfume-removebg-preview.png" alt="Luxury perfume bottle" />
+        <h3>Royal Bloom</h3>
+      </div>
+      <div class="perfume-card">
+        <img src="Images/VelvetNoir-removebg-preview.png" alt="Elegant perfume design" />
+        <h3>Velvet Noir</h3>
+      </div>
+      <div class="perfume-card">
+        <img src="Images/Amber_dusk_perfume-removebg-preview.png" alt="Perfume collection" />
+        <h3>Amber Dusk</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="makeup-section">
+    <h2>Makeup should never mask you, it should mirror you.</h2>
+    <p>
+      Every swipe, every shade is a way to say "this is me."
+      From soft elegance to bold confidence, let your beauty speak before
+       you do. <strong>Shop our curated makeup collection to bring that 
+        beauty to life</strong>
+      
+    </p>
+    
+    <div class="makeup-gallery">
+      <div class="makeup-item">
+        <img src="images/Foundation-removebg-preview.png" alt="Makeup Look 1">
+        <p>Foundation</p>
+      </div>
+      <div class="makeup-item">
+        <img src="images/Girl_lipstick-removebg-preview.png" alt="Makeup Look 2">
+        <p>Lipstick</p>
+      </div>
+      <div class="makeup-item">
+        <img src="images/Girl mascara.jpg" alt="Makeup Look 3">
+        <p>Mascara</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="cta">
+    <p>Interested in shopping with us or want a skincare consultation?</p>
+    <a href="https://wa.link/5v46cw" target="_blank">
+      <button>Contact Us</button>
+    </a>
+  </section>
+  
+
+
+  <section class="shop-address">
+    <h2>Visit Our Store</h2>
+    <p>Diamond Cosmetics Store</p>
+    <p>D3, No 11, Ogbuete Main Market,<br>Enugu, Nigeria</p>
+    <p>Open: Mon – Sat | 9:00am – 6:00pm</p>
+    <p>Phone: +234 706 074 0227</p>
+  </section>
+
+  
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.665924823823!2d7.48219430818686!3d6.436935624141238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a17e3133f021%3A0x98f8889e6d62227d!2sd3%2C%2011%20Ogbete%20Markett%20Rd%2C%20Ogbete%2C%20Enugu%20400102%2C%20Enugu!5e0!3m2!1sen!2sng!4v1751723511876!5m2!1sen!2sng"  
+  width="100%" 
+  height="450" 
+  style="border:0; display: block;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  
+
+  <footer>
+    &copy; 2025 Diamond Cosmetics. All rights reserved.
+  </footer>
+</body>
+</html>
